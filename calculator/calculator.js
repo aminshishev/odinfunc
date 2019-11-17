@@ -1,25 +1,46 @@
-function add () {
-	
+function add (a,b) {
+	return a + b;
 }
 
-function subtract () {
-	
+function subtract (a,b) {
+	return a - b;
 }
 
-function sum () {
-	
+function sum (a) {
+	let res = 0;
+	for (i = 0; i < a.length; i++) {
+		res += a[i];
+	}
+	return res;
 }
 
-function multiply () {
-	
+function multiply (a) {
+	let res = 1;
+	if (a.length == 0) {
+		res = 0;
+	} else if (a.length == 1) {
+		res = a[0];
+	} else {
+		for (i = 0; i < a.length; i++) {
+			res *= a[i];
+	}}
+	return res;
 }
 
-function power() {
-	
+function power(a, b) {
+	return a ** b;
 }
 
-function factorial() {
-	
+function factorial(a) {
+	let res = 1;
+	if (a == 0) {
+		res = 1;
+	} else {
+		for (i = 1; i <= a; i++) {
+			res *= i;
+		}
+	}
+	return res;
 }
 
 module.exports = {
